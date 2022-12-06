@@ -23,6 +23,9 @@ public class productController {
     public String edit() {
         return "search product page";
     }
-
+    @GetMapping("/view")
+    public String view() {
+        return "view product page";
+    }
 
 }
