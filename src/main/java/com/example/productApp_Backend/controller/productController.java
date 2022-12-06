@@ -10,6 +10,11 @@ public class productController {
     public  String welcome(){
         return "this is welcome page";
     }
+
+    @PostMapping("/add")
+    public String add() {
+        return "search product page";
+    }
     @PostMapping("/search")
     public String search() {
         return "search product page";
