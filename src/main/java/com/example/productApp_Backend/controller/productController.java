@@ -7,12 +7,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class productController {
     @GetMapping("/")
-    public  String add(){
-        return "this is add page";
+    public  String welcome(){
+        return "this is welcome page";
     }
     @PostMapping("/search")
     public String search() {
         return "search product page";
     }
+    @PostMapping("/edit")
+    public String edit() {
+        return "search product page";
+    }
+
 
 }
