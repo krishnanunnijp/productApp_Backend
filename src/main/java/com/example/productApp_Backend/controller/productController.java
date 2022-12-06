@@ -14,4 +14,5 @@ public class productController {
     public String search() {
         return "search product page";
     }
+
 }
