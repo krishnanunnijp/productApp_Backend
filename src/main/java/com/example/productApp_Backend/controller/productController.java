@@ -23,9 +23,14 @@ public class productController {
     public String edit() {
         return "search product page";
     }
-    @GetMapping("/view")
+    @GetMapping("/product")
     public String view() {
         return "view product page";
     }
+    @PostMapping("/delete")
+    public String delete() {
+        return "delete product page";
+    }
+
 
 }
