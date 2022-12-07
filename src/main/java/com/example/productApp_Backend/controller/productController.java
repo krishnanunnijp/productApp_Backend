@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import  com.example.productApp_Backend.model.product;
 
+import java.util.HashMap;
 import java.util.List;
 
 @RestController
@@ -18,9 +19,11 @@ public class productController {
 
     @CrossOrigin(origins = "*")
     @PostMapping(path = "/add",consumes = "application/json",produces = "application/json")
-    public String add(@RequestBody product p) {
+    public HashMap<String,String> add(@RequestBody product p) {
+        HashMap<String, String> map = new HashMap<>();
         dao.save(p);
-        return " product page";
+        map.put("status","success");
+        return map;
     }
     @PostMapping("/search")
     public String search() {
